@@ -1,5 +1,5 @@
 
-function validateEmail = (email) => {
+function validateEmail(email) {
 
     return email;
 }
