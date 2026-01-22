@@ -8,4 +8,15 @@ const validateEmail = (email) => {
     return re.test(String(email).toLowerCase());
 };
 
-module.exports = { validateEmail };
+
+
+const validatePassword = (password) => {
+    if (typeof password !== 'string') {
+        return false;
+    }
+    // Minimo 6 caracteres, al menos una mayuscula, una minuscula y un numero
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+    return re.test(password);
+};
+
+module.exports = { validateEmail, validatePassword };
